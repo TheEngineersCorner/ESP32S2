@@ -68,6 +68,11 @@ add the library. (add it via the boards manager. tools->boards->boards manager, 
 
 https://github.com/adafruit/Adafruit_NeoPixel
 open the example sketch from the library, under file->examples->Adafruit Neopixel->simple
+don't forget to choose the board as esp32 s2 dev.
+set the com port, if you have problems accessing it try.  from this page https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/get-started/establish-serial-connection.html
+```
+sudo usermod -a -G dialout $USER
+```
 
 change the led pin to 18
 ```
