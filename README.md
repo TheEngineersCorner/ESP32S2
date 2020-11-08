@@ -47,6 +47,7 @@ sudo python2.7 -m pip install pyserial
 download the esp32s2 branch from
 https://github.com/espressif/arduino-esp32/tree/esp32s2
 download with clone or zip. (I used zip to ensure it was the esp32 s2 branch not the standard esp32, and manually moved the version into ~/Arduino/hardware/espressif ) you can try to git clone and includes set up. yes it will install python 3, I am not sure if it will run on python 2. which is a requirement for arduino not the esptools setup.
+note that the git directory is esp32s2 not esp32 if you have esp32 from the board manager it will not interfere but will make a duplicate directory esp32 in arduino's board manager. it will be obvious which is which as there will be esp32s2 dev board in one and not in the other.
 ```
 sudo usermod -a -G dialout $USER && \
 sudo apt-get install git && \
@@ -55,12 +56,13 @@ sudo python get-pip.py && \
 sudo pip install pyserial && \
 mkdir -p ~/Arduino/hardware/espressif && \
 cd ~/Arduino/hardware/espressif && \
-git clone -b esp32s2 https://github.com/espressif/arduino-esp32.git esp32s2 && \
-cd esp32 && \
+git clone --recursive -b esp32s2 https://github.com/espressif/arduino-esp32.git esp32s2 && \
+cd esp32s2 && \
 git submodule update --init --recursive && \
 cd tools && \
 python3 get.py
 ```
+
 
 now run arduino ide using the shortcut created from the install.sh from the arduino tar download. Do not use arduino from the app store.
 
