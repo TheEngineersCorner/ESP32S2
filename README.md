@@ -14,7 +14,8 @@ VERSION_CODENAME=focal
 UBUNTU_CODENAME=focal
 
 ```
-The esp32 s2 used ESP32-S2-Saola-1 documentation https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/hw-reference/esp32s2/user-guide-saola-1-v1.2.html
+The esp32 s2 used ESP32-S2-Saola-1 (esp32-s2-wroom from mouser)
+documentation https://docs.espressif.com/projects/esp-idf/en/latest/esp32s2/hw-reference/esp32s2/user-guide-saola-1-v1.2.html
 
 Skip this step if you have arduino installed. 
 follow this guide https://www.arduino.cc/en/Guide/Linux
