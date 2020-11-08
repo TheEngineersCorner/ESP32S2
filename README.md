@@ -1,5 +1,4 @@
-# ESP32S2
-### ESP32 S2 ARDUINO GUIDE
+# ESP32 S2 ARDUINO GUIDE
 Hello, I have run into problems running esp32 s2. This guide will be for ubunutu.
 ```NAME="Ubuntu"
 VERSION="20.04.1 LTS (Focal Fossa)"
@@ -65,12 +64,13 @@ python3 get.py
 now run arduino ide using the shortcut created from the install.sh from the arduino tar download. Do not use arduino from the app store.
 
 for an example to get the neopixel running on your esp32 s2
-add the library
+add the library. (add it via the boards manager. tools->boards->boards manager, search for Adafruit neopixel)
 
 https://github.com/adafruit/Adafruit_NeoPixel
+open the example sketch from the library, under file->examples->Adafruit Neopixel->simple
 
 change the led pin to 18
 ```
 #define LED_PIN    18
 ```
-Then run the code.
+Then run the code and upload.
